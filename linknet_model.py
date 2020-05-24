@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 import torchvision.models as models
 
 class DecoderBlock(nn.Module):
@@ -51,7 +52,13 @@ class Linknet(nn.Module):
             activs.append(inp)
         out = activs.pop(-1)
         for i in reversed(range(4)):
-            out = self.decoders[i](out) + activs[i]
+            try:
+                out = self.decoders[i](out) + activs[i]
+            except:
+                out = self.decoders[i](out)
+                _,_,h,w = activs[i].shape
+                out = F.interpolate(out,size=(h,w))
+                out += activs[i]
         return self.out(out)
                                  
                                  
