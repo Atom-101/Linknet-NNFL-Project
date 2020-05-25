@@ -1,6 +1,5 @@
 # Linknet-NNFL-Project
-Implementation of paper: **Linknet: Exploiting Encoder Representations for Efficient Semantic Segmentation
-**
+Implementation of paper: __Linknet: Exploiting Encoder Representations for Efficient Semantic Segmentation__
 
 # Instructions
 The linknet_model.py file contains the code for the implemented linknet model. The dataloaders and training codes are in the respective train notebooks.
