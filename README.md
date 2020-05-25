@@ -14,4 +14,4 @@ Run all cells in a notebook to train a linknet model and evaluate it.
 | Dilation8 | 65.3|
 | Linknet(original) | 68.3|
 | Linknet(ours) | 67.6 |
-| Linknet(with modifications)| 65.17|
+| Linknet(with modifications)| 65.2|
