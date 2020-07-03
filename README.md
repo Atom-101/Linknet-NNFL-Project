@@ -23,7 +23,7 @@ Existing techniques try to make the network deeper to improve performance. Evide
 
 LinkNet uses ResNet-18 (11M parameters) as its encoder, which is a fairly lighter network as compared to VGG16 (138M parameters) and ResNet-101 (45M parameters) used in contemporary segmentation models.
 
-#### Datset
+#### Dataset
 The model was trained on the Camvid and Cityscapes dataset. Both these datasets consist of video frames depicting urban areas, annotated pixel wise. The original Camvid dataset has 376 training images, 101 validation and 233 test images. Each image has a size of 960x720 pixels with 32 discrete classes. The authors fused similar classes to reduce the number to 12. They also reduce the size of images to 768x576 to make it easier to fit the dataset. The cityscapes dataset has 2975 training and 500 validation images. Each image has a size of 2048x1024 with 34 discrete classes. The authors reduce the number of classes to 19 and image size to 1024x512. *We were unable to find this 19 class version of the dataset and used the original 34 class version.*
 
 #### Training
